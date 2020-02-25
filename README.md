@@ -19,7 +19,11 @@ TWIG:
 PHP:
 <code>
   $yourObject = new stdClass;
+ </code>
+ <code>
   $yourObject->name = 'Tashfeen';
+   </code>
+   <code>
   \Drupal::service('d_debugger.console')->printToConsole($yourObject);
 </code>
 
