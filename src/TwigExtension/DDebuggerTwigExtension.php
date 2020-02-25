@@ -3,12 +3,20 @@
 namespace Drupal\d_debugger\TwigExtension;
 
 
+use Drupal\social_media_links\Plugin\SocialMediaLinks\Platform\Drupal;
+
 /**
  * Class DDebuggerTwigExtension.
  */
 class DDebuggerTwigExtension extends \Twig_Extension {
 
-   /**
+   private $printService;
+
+   public function __construct() {
+       $this->printService = \Drupal::service('d_debugger.console');
+   }
+
+    /**
     * {@inheritdoc}
     */
     public function getName() {
@@ -20,7 +28,7 @@ class DDebuggerTwigExtension extends \Twig_Extension {
      */
     public function getFilters() {
         return [
-            new \Twig_SimpleFilter('console_log', [$this, 'consoleLogger']),
+            new \Twig_SimpleFilter('console_log', [$this, 'print']),
         ];
     }
 
@@ -28,9 +36,7 @@ class DDebuggerTwigExtension extends \Twig_Extension {
      * @param $context
      * Print the $context in console
      */
-    public function consoleLogger($context) {
-        echo '<script>';
-        echo 'console.log('. json_encode( $context ) .')';
-        echo '</script>';
+    public function print($context) {
+        $this->printService->printToConsole($context);
     }
 }

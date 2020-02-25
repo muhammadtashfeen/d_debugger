@@ -4,3 +4,6 @@ services:
     arguments: []
     tags:
       - { name: twig.extension }
+  d_debugger.console:
+    class: Drupal\d_debugger\DDebuggerService
+    arguments: []
