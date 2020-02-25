@@ -1,0 +1,6 @@
+services:
+  d_debugger.twig.extension:
+    class: Drupal\d_debugger\TwigExtension\DDebuggerTwigExtension
+    arguments: []
+    tags:
+      - { name: twig.extension }

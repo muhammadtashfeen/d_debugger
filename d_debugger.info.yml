@@ -1,0 +1,4 @@
+name: Drupal Console Debugger
+description: PHP console debugger service/extension that prints the variable to the console.
+type: module
+core: 8.x
