@@ -1,4 +1,4 @@
-# Drupal Console Debugger
+# Drupal 8 Console Debugger
 
 #### Nice way to debug drupal variables inside Twig Templates and PHP.
 
