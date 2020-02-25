@@ -12,19 +12,20 @@ Just place the following snippet in your twig or php file respectively and it wi
 
 TWIG:  
 <code>
-  {% set name = 'Tashfeen' %}
-  {{ name|console_log}}
+
+{% set name = 'Tashfeen' %}
+
+{{ name|console_log}}
 </code>
 
 PHP:
+
 <code>
-  $yourObject = new stdClass;
- </code>
- <code>
-  $yourObject->name = 'Tashfeen';
-   </code>
-   <code>
-  \Drupal::service('d_debugger.console')->printToConsole($yourObject);
+$yourObject = new stdClass;
+
+$yourObject->name = 'Tashfeen';
+
+\Drupal::service('d_debugger.console')->printToConsole($yourObject);
 </code>
 
 ![Screenshot](readme.png)
